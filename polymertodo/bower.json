@@ -1,0 +1,23 @@
+{
+  "name": "polymertodo",
+  "description": "todo app with polymer",
+  "main": "",
+  "authors": [
+    "Stijn"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "polymer": "Polymer/polymer#^1.9.1",
+    "iron-elements": "^1.0.10",
+    "paper-elements": "^1.0.7"
+  }
+}
