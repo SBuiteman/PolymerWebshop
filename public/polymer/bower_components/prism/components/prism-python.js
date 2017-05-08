@@ -7,10 +7,7 @@ Prism.languages.python= {
 		pattern: /(^|[^\\])#.*/,
 		lookbehind: true
 	},
-	'string': {
-		pattern: /("|')(?:\\\\|\\?[^\\\r\n])*?\1/,
-		greedy: true
-	},
+	'string': /("|')(?:\\?.)*?\1/,
 	'function' : {
 		pattern: /((?:^|\s)def[ \t]+)[a-zA-Z_][a-zA-Z0-9_]*(?=\()/g,
 		lookbehind: true

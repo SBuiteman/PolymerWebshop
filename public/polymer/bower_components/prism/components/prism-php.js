@@ -16,8 +16,7 @@ Prism.languages.php = Prism.languages.extend('clike', {
 	'constant': /\b[A-Z0-9_]{2,}\b/,
 	'comment': {
 		pattern: /(^|[^\\])(?:\/\*[\w\W]*?\*\/|\/\/.*)/,
-		lookbehind: true,
-		greedy: true
+		lookbehind: true
 	}
 });
 

@@ -23,12 +23,7 @@ Prism.languages.scss = Prism.languages.extend('css', {
 		// Initial look-ahead is used to prevent matching of blank selectors
 		pattern: /(?=\S)[^@;\{\}\(\)]?([^@;\{\}\(\)]|&|#\{\$[-_\w]+\})+(?=\s*\{(\}|\s|[^\}]+(:|\{)[^\}]+))/m,
 		inside: {
-			'parent': {
-				pattern: /&/,
-				alias: 'important'
-			},
-			'placeholder': /%[-_\w]+/,
-			'variable': /\$[-_\w]+|#\{\$[-_\w]+\}/
+			'placeholder': /%[-_\w]+/
 		}
 	}
 });
@@ -43,14 +38,7 @@ Prism.languages.insertBefore('scss', 'atrule', {
 	]
 });
 
-Prism.languages.scss.property = {
-	pattern: /(?:[\w-]|\$[-_\w]+|#\{\$[-_\w]+\})+(?=\s*:)/i,
-	inside: {
-		'variable': /\$[-_\w]+|#\{\$[-_\w]+\}/
-	}
-};
-
-Prism.languages.insertBefore('scss', 'important', {
+Prism.languages.insertBefore('scss', 'property', {
 	// var and interpolated vars
 	'variable': /\$[-_\w]+|#\{\$[-_\w]+\}/
 });
@@ -60,10 +48,7 @@ Prism.languages.insertBefore('scss', 'function', {
 		pattern: /%[-_\w]+/,
 		alias: 'selector'
 	},
-	'statement': {
-		pattern: /\B!(?:default|optional)\b/i,
-		alias: 'keyword'
-	},
+	'statement': /\B!(?:default|optional)\b/i,
 	'boolean': /\b(?:true|false)\b/,
 	'null': /\bnull\b/,
 	'operator': {

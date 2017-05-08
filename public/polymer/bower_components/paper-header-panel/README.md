@@ -147,6 +147,5 @@ The following custom properties and mixins are available for styling:
 | `--paper-header-panel-seamed-container` | Mixin applied to the container when in seamed mode | `{}` |
 | `--paper-header-panel-waterfall-container` | Mixin applied to the container when in waterfall mode | `{}` |
 | `--paper-header-panel-waterfall-tall-container` | Mixin applied to the container when in tall waterfall mode | `{}` |
-| `--paper-header-panel-shadow` | Mixin applied to the waterfall shadow | `{}` |
 
 

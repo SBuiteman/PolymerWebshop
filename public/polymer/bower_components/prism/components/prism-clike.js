@@ -9,10 +9,7 @@ Prism.languages.clike = {
 			lookbehind: true
 		}
 	],
-	'string': {
-		pattern: /(["'])(\\(?:\r\n|[\s\S])|(?!\1)[^\\\r\n])*\1/,
-		greedy: true
-	},
+	'string': /(["'])(\\(?:\r\n|[\s\S])|(?!\1)[^\\\r\n])*\1/,
 	'class-name': {
 		pattern: /((?:\b(?:class|interface|extends|implements|trait|instanceof|new)\s+)|(?:catch\s+\())[a-z0-9_\.\\]+/i,
 		lookbehind: true,

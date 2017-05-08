@@ -64,21 +64,19 @@
 	});
 
 	Prism.languages.insertBefore('ruby', 'number', {
-		'builtin': /\b(Array|Bignum|Binding|Class|Continuation|Dir|Exception|FalseClass|File|Stat|File|Fixnum|Float|Hash|Integer|IO|MatchData|Method|Module|NilClass|Numeric|Object|Proc|Range|Regexp|String|Struct|TMS|Symbol|ThreadGroup|Thread|Time|TrueClass)\b/,
+		'builtin': /\b(Array|Bignum|Binding|Class|Continuation|Dir|Exception|FalseClass|File|Stat|File|Fixnum|Fload|Hash|Integer|IO|MatchData|Method|Module|NilClass|Numeric|Object|Proc|Range|Regexp|String|Struct|TMS|Symbol|ThreadGroup|Thread|Time|TrueClass)\b/,
 		'constant': /\b[A-Z][a-zA-Z_0-9]*(?:[?!]|\b)/
 	});
 
 	Prism.languages.ruby.string = [
 		{
 			pattern: /%[qQiIwWxs]?([^a-zA-Z0-9\s\{\(\[<])(?:[^\\]|\\[\s\S])*?\1/,
-			greedy: true,
 			inside: {
 				'interpolation': interpolation
 			}
 		},
 		{
 			pattern: /%[qQiIwWxs]?\((?:[^()\\]|\\[\s\S])*\)/,
-			greedy: true,
 			inside: {
 				'interpolation': interpolation
 			}
@@ -86,28 +84,24 @@
 		{
 			// Here we need to specifically allow interpolation
 			pattern: /%[qQiIwWxs]?\{(?:[^#{}\\]|#(?:\{[^}]+\})?|\\[\s\S])*\}/,
-			greedy: true,
 			inside: {
 				'interpolation': interpolation
 			}
 		},
 		{
 			pattern: /%[qQiIwWxs]?\[(?:[^\[\]\\]|\\[\s\S])*\]/,
-			greedy: true,
 			inside: {
 				'interpolation': interpolation
 			}
 		},
 		{
 			pattern: /%[qQiIwWxs]?<(?:[^<>\\]|\\[\s\S])*>/,
-			greedy: true,
 			inside: {
 				'interpolation': interpolation
 			}
 		},
 		{
 			pattern: /("|')(#\{[^}]+\}|\\(?:\r?\n|\r)|\\?.)*?\1/,
-			greedy: true,
 			inside: {
 				'interpolation': interpolation
 			}

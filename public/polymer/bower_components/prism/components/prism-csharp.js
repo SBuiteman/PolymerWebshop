@@ -8,14 +8,6 @@ Prism.languages.csharp = Prism.languages.extend('clike', {
 });
 
 Prism.languages.insertBefore('csharp', 'keyword', {
-	'generic-method': {
-		pattern: /[a-z0-9_]+\s*<[^>\r\n]+?>\s*(?=\()/i,
-		alias: 'function',
-		inside: {
-			keyword: Prism.languages.csharp.keyword,
-			punctuation: /[<>(),.:]/
-		}
-	},
 	'preprocessor': {
 		pattern: /(^\s*)#.*/m,
 		lookbehind: true,

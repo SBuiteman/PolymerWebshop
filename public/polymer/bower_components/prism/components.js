@@ -44,7 +44,6 @@ var components = {
 		},
 		"markup": {
 			"title": "Markup",
-			"aliasTitles": { "html": "HTML", "xml": "XML", "svg": "SVG", "mathml": "MathML" },
 			"option": "default"
 		},
 		"css": {
@@ -60,6 +59,9 @@ var components = {
 			"option": "default",
 			"require": "clike"
 		},
+
+
+
 		"abap": {
 			"title": "ABAP",
 			"owner": "dellagustin"
@@ -68,10 +70,6 @@ var components = {
 			"title": "ActionScript",
 			"require": "javascript",
 			"owner": "Golmote"
-		},
-		"ada": {
-			"title": "Ada",
-			"owner": "Lucretia"
 		},
 		"apacheconf": {
 			"title": "Apache Configuration",
@@ -122,10 +120,6 @@ var components = {
 		"brainfuck": {
 			"title": "Brainfuck",
 			"owner": "Golmote"
-		},
-		"bro": {
-			"title": "Bro",
-			"owner": "wayward710"
 		},
 		"c": {
 			"title": "C",
@@ -214,10 +208,6 @@ var components = {
 			"require": "clike",
 			"owner": "arnehormann"
 		},
-		"graphql": {
-			"title": "GraphQL",
-			"owner": "Golmote"
-		},
 		"groovy": {
 			"title": "Groovy",
 			"require": "clike",
@@ -272,11 +262,6 @@ var components = {
 			"require": "clike",
 			"owner": "sherblot"
 		},
-		"jolie": {
-			"title": "Jolie",
-			"require": "clike",
-			"owner": "thesave"
-		},
 		"json": {
 			"title": "JSON",
 			"owner": "CupOfTea696"
@@ -301,10 +286,6 @@ var components = {
 		"less": {
 			"title": "Less",
 			"require": "css",
-			"owner": "Golmote"
-		},
-		"livescript": {
-			"title": "LiveScript",
 			"owner": "Golmote"
 		},
 		"lolcode": {
@@ -414,15 +395,6 @@ var components = {
 			"title": "Prolog",
 			"owner": "Golmote"
 		},
-		"properties": {
-			"title": ".properties",
-			"owner": "Golmote"
-		},
-		"protobuf": {
-			"title": "Protocol Buffers",
-			"require": "clike",
-			"owner": "just-boris"
-		},
 		"puppet": {
 			"title": "Puppet",
 			"owner": "Golmote"
@@ -452,11 +424,6 @@ var components = {
 			"title": "React JSX",
 			"require": ["markup", "javascript"],
 			"owner": "vkbansal"
-		},
-		"reason": {
-			"title": "Reason",
-			"require": "clike",
-			"owner": "Golmote"
 		},
 		"rest": {
 			"title": "reST (reStructuredText)",
@@ -560,10 +527,6 @@ var components = {
 			"require": "markup",
 			"owner": "Golmote"
 		},
-		"xojo": {
-			"title": "Xojo (REALbasic)",
-			"owner": "Golmote"
-		},
 		"yaml": {
 			"title": "YAML",
 			"owner": "hason"
@@ -582,19 +545,13 @@ var components = {
 		"show-invisibles": "Show Invisibles",
 		"autolinker": "Autolinker",
 		"wpd": "WebPlatform Docs",
-		"custom-class": {
-			"title": "Custom Class",
-			"owner": "dvkndn"
-		},
 		"file-highlight": {
 			"title": "File Highlight",
 			"noCSS": true
 		},
 		"show-language": {
 			"title": "Show Language",
-			"owner": "nauzilus",
-			"noCSS": true,
-			"require": "toolbar"
+			"owner": "nauzilus"
 		},
 		"jsonp-highlight": {
 			"title": "JSONP Highlight",
@@ -648,34 +605,11 @@ var components = {
 		"keep-markup": {
 			"title": "Keep Markup",
 			"owner": "Golmote",
-			"after": "normalize-whitespace",
 			"noCSS": true
 		},
 		"command-line": {
 			"title": "Command Line",
 			"owner": "chriswells0"
-		},
-		"unescaped-markup": "Unescaped Markup",
-		"normalize-whitespace": {
-			"title": "Normalize Whitespace",
-			"owner": "zeitgeist87",
-			"after": "unescaped-markup",
-			"noCSS": true
-		},
-		"data-uri-highlight": {
-			"title": "Data-URI Highlight",
-			"owner": "Golmote",
-			"noCSS": true
-		},
-		"toolbar": {
-			"title": "Toolbar",
-			"owner": "mAAdhaTTah"
-		},
-		"copy-to-clipboard": {
-			"title": "Copy to Clipboard Button",
-			"owner": "mAAdhaTTah",
-			"require": "toolbar",
-			"noCSS": true
 		}
 	}
 };

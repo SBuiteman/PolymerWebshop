@@ -6,11 +6,3 @@ Prism.languages.java = Prism.languages.extend('clike', {
 		lookbehind: true
 	}
 });
-
-Prism.languages.insertBefore('java','function', {
-	'annotation': {
-		alias: 'punctuation',
-		pattern: /(^|[^.])@\w+/,
-		lookbehind: true
-	}
-});

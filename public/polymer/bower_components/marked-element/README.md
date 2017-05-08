@@ -12,22 +12,20 @@ thing! https://github.com/PolymerLabs/tedium/issues
 
 -->
 
-[![Build status](https://travis-ci.org/PolymerElements/marked-element.svg?branch=master)](https://travis-ci.org/PolymerElements/marked-element)
+[![Build Status](https://travis-ci.org/PolymerElements/marked-element.svg?branch=master)](https://travis-ci.org/PolymerElements/marked-element)
 
 
-## &lt;marked-element&gt;
+##&lt;marked-element&gt;
 
 Element wrapper for the [marked](https://github.com/chjj/marked) library.
 
-`<marked-element>` accepts Markdown source and renders it to a child
+`<marked-element>` accepts Markdown source, and renders it to a child
 element with the class `markdown-html`. This child element can be styled
 as you would a normal DOM element. If you do not provide a child element
 with the `markdown-html` class, the Markdown source will still be rendered,
 but to a shadow DOM child that cannot be styled.
 
-The Markdown source can be specified several ways:
-
-### Use the `markdown` attribute to bind markdown
+The Markdown source can be specified either via the `markdown` attribute:
 
 ```html
 <marked-element markdown="`Markdown` is _awesome_!">
@@ -35,7 +33,7 @@ The Markdown source can be specified several ways:
 </marked-element>
 ```
 
-### Use `<script type="text/markdown">` element child to inline markdown
+Or, you can provide it via a `<script type="text/markdown">` element child:
 
 ```html
 <marked-element>
@@ -52,15 +50,6 @@ The Markdown source can be specified several ways:
     </awesome-sauce>
     ```
   </script>
-</marked-element>
-```
-
-### Use `<script type="text/markdown" src="URL">` element child to specify remote markdown
-
-```html
-<marked-element>
-  <div class="markdown-html"></div>
-  <script type="text/markdown" src="../guidelines.md"></script>
 </marked-element>
 ```
 
@@ -81,3 +70,5 @@ as you would a regular DOM element:
   padding-left: 24px;
 }
 ```
+
+

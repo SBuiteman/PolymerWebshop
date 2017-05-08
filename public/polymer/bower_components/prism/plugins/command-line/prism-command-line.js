@@ -34,18 +34,14 @@ Prism.hooks.add('complete', function (env) {
 		pre.className += ' command-line';
 	}
 
-	var getAttribute = function(key, defaultValue) {
-		return (pre.getAttribute(key) || defaultValue).replace(/"/g, '&quot');
-	};
-
 	// Create the "rows" that will become the command-line prompts. -- cwells
 	var lines = new Array(1 + env.code.split('\n').length);
-	var promptText = getAttribute('data-prompt', '');
+	var promptText = pre.getAttribute('data-prompt') || '';
 	if (promptText !== '') {
 		lines = lines.join('<span data-prompt="' + promptText + '"></span>');
 	} else {
-		var user = getAttribute('data-user', 'user');
-		var host = getAttribute('data-host', 'localhost');
+		var user = pre.getAttribute('data-user') || 'user';
+		var host = pre.getAttribute('data-host') || 'localhost';
 		lines = lines.join('<span data-user="' + user + '" data-host="' + host + '"></span>');
 	}
 

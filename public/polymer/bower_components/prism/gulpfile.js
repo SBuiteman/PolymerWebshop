@@ -70,10 +70,6 @@ gulp.task('languages-plugins', function (cb) {
 							languagesMap[p] = title;
 						}
 
-						for (var name in data.languages[p].aliasTitles) {
-							languagesMap[name] = data.languages[p].aliasTitles[name];
-						}
-
 						if(data.languages[p].require) {
 							dependenciesMap[p] = data.languages[p].require;
 						}

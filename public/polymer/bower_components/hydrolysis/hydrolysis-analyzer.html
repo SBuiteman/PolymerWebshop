@@ -65,11 +65,6 @@ var hydrolysis = require('hydrolysis');
         notify:   true,
       },
 
-      resolver: {
-        type:     String,
-        value:    'xhr'
-      }
-
     },
 
     ready: function() {
@@ -97,7 +92,6 @@ var hydrolysis = require('hydrolysis');
         clean:  this.clean,
         filter: this.transitive ? function() { return false; } : null,
         attachAst: true,
-        resolver: this.resolver
       };
 
       var baseUri = this.ownerDocument.baseURI;
