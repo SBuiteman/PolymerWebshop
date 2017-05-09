@@ -1,0 +1,24 @@
+<link rel="import" href="../bower_components/polymer/polymer.html">
+
+<link rel="import" href="product-item.html">
+
+<dom-module id="product-list">
+    <template>
+        <ajax-service todos="{{todos}}"></ajax-service>
+
+        <template is="dom-repeat" items="{{todos}}">
+            <product-item></product-item>
+        </template>
+
+        <div>
+            <span>[[todos.length]]</span>
+        </div>
+    </template>
+</dom-module>
+
+<script>
+    Polymer({
+        is: "product-list"
+    });
+
+</script>
