@@ -10,19 +10,19 @@
             border-radius: 50%;
             width: 40px;
             height: 40px;
-            /* width and height can be anything, as long as they're equal */
         }
 
         .blue {
             background-color: blue;
         }
     </style>
+
     <template>
         <div role="listbox">
             <paper-icon-item>
                 <div class="avatar blue" item-icon></div>
                 <paper-item-body two-line>
-                    <div>Photos</div>
+                    <div>{{product.name}}</div>
                     <div secondary>Jan 9, 2014</div>
                 </paper-item-body>
                 <paper-icon-button icon="star" alt="favourite this!">

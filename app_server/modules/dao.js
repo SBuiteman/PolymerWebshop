@@ -4,10 +4,17 @@ var ObjectId = require('mongodb').ObjectID;
 
 var async = require('async');
 
-module.exports.test = function (cb) {
+module.exports.findAllProducts = function (cb) {
     db.products.find({}, function (err, res) {
         if (res.length > 0) {
-            console.log("hij returned: " + res);
+            cb(res);
+        }
+    });
+}
+
+module.exports.findAllCategories = function (cb) {
+    db.categories.find({}, function (err, res) {
+        if (res.length > 0) {
             cb(res);
         }
     });
