@@ -18,4 +18,4 @@ module.exports.findAllCategories = function (cb) {
             cb(res);
         }
     });
-}
+};

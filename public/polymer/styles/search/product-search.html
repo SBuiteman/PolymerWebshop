@@ -1,12 +1,56 @@
 <link rel="import" href="../../bower_components/polymer/polymer.html">
+<link rel="import" href="../../bower_components/paper-input/paper-input.html"/>
 <link rel="import" href="../../bower_components/iron-input/iron-input.html">
+<link rel="import" href="../../bower_components/paper-button/paper-button.html">
+
 
 <dom-module id="product-search">
-    <input is="iron-input" bind-value="{{mySearch}}" placeholder="Search">
+
+    <style>
+
+
+        paper-button:hover {
+            color: red;
+            background-color: #00897b;
+        }
+
+        paper-button {
+            float: right;
+        }
+
+        .outer {
+            width: 100%;
+            float: left;
+        }
+
+        .inner {
+            padding: 10px 0px 10px 10px;
+            width: 80%;
+            float: left;
+        }
+
+    </style>
+
+    <template>
+        <paper-input-container>
+
+            <div class="outer">
+                <paper-button prefix on-tap="_search">Search</paper-button>
+                <div class="inner">
+                    <input is="iron-input" bind-value="{{mySearch}}" placeholder="Search">
+                </div>
+            </div>
+        </paper-input-container>
+    </template>
 </dom-module>
 
 <script>
     Polymer({
-        is: "product-search"
+        is: "product-search",
+        _search: function () {
+            console.log(this.mySearch)
+
+        }
+
     });
 </script>
