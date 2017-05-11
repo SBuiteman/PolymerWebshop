@@ -1,7 +1,8 @@
-<link rel="import" href="../bower_components/polymer/polymer.html">
+<link rel="import" href="../../bower_components/polymer/polymer.html">
 
 <link rel="import" href="ajax-service.html">
 <link rel="import" href="product-list.html">
+<link rel="import" href="../search/product-search.html">
 
 <dom-module id="product-view">
     <style>
@@ -12,6 +13,9 @@
             <ajax-service products="{{products}}"></ajax-service>
             <h3>Alle producten</h3>
             <product-list products="{{products}}"></product-list>
+        </div>
+        <div>
+            <product-search>test</product-search>
         </div>
     </template>
 
