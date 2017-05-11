@@ -1,17 +1,32 @@
 <link rel="import" href="../bower_components/polymer/polymer.html">
 <link rel="import" href="../bower_components/paper-item/paper-item.html">
+<link rel="import" href="../bower_components/paper-button/paper-button.html">
 
 <dom-module id="product-item">
-
     <style>
+        paper-button {
+            color: #00acc1;
+            position: relative;
+        }
+        paper-item {
+            --paper-icon-item: {
+                background: violet;
+            };
+        }
     </style>
-
     <template>
-        <paper-item>{{product.name}}</paper-item>
+        <div role="listbox">
+            <paper-icon-item>
+                <paper-item-body two-line>
+                    <div>{{product.name}}</div>
+                    <div secondary>Prijs</div>
+                </paper-item-body>
+                <paper-button>Add</paper-button>
+            </paper-icon-item>
+        </div>
     </template>
 
 </dom-module>
-
 
 <script>
     console.log('hehhehehehe');

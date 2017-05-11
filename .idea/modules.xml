@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-<<<<<<< HEAD
       <module fileurl="file://$PROJECT_DIR$/.idea/PolymerWebshop.iml" filepath="$PROJECT_DIR$/.idea/PolymerWebshop.iml" />
-=======
-      <module fileurl="file://$PROJECT_DIR$/.idea/PolymerUdemy.iml" filepath="$PROJECT_DIR$/.idea/PolymerUdemy.iml" />
->>>>>>> be88b22884e83f343f2536365207d6c1992ce0a9
     </modules>
   </component>
 </project>
