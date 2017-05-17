@@ -12,10 +12,10 @@
         <div>
             <ajax-service products="{{products}}"></ajax-service>
             <h3>Alle producten</h3>
-            <product-list products="{{products}}"></product-list>
+            <product-list filter-by="{{mySearch}}" products="{{products}}"></product-list>
         </div>
         <div>
-            <product-search>test</product-search>
+            <product-search mySearch="{{mySearch}}"></product-search>
         </div>
     </template>
 
