@@ -1,0 +1,30 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+<link rel="import" href="../../bower_components/iron-ajax/iron-ajax.html">
+
+<dom-module id="ajax-service">
+    <style>
+
+    </style>
+    <template>
+        <iron-ajax auto url="http://localhost:2100/getCategories" handle-as="json" on-response="tasksLoaded"></iron-ajax>
+    </template>
+</dom-module>
+
+<script>
+    Polymer({
+        is: "ajax-service",
+        properties: {
+            categories: {
+                type: Array,
+                notify: true
+            }
+        },
+        attached: function () {
+            this.categories = [];
+        },
+        tasksLoaded: function (data) {
+            this.categories = data.detail.response;
+        }
+    });
+
+</script>

@@ -8,8 +8,6 @@ module.exports.index = function(err, res) {
 };
 
 module.exports.findAllProducts = function(err, res) {
-
-    //console.log("in dao test function");
     dao.findAllProducts(function (data) {
         console.log("products = " + data);
         res.send(data);
@@ -17,8 +15,6 @@ module.exports.findAllProducts = function(err, res) {
 };
 
 module.exports.findAllCategories = function(err, res) {
-
-    //console.log("in dao test function");
     dao.findAllCategories(function (data) {
         console.log("categories = " + data);
         res.send(data);
@@ -27,8 +23,5 @@ module.exports.findAllCategories = function(err, res) {
 
 module.exports.cart = function(err, res) {
     console.log("cart");
-    //res.send("hallllooooo");
     //res.sendFile(path.resolve('app_server/views/index.html'));
 };
-
-
